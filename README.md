@@ -36,11 +36,12 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor kick-off werkgroep</summary>
 
   ### Je opdracht:
-  link naar de website die je gaat namaken óf de naam/omschrijving van je eigen ontwerp
+  Ik ga de H&M website maken https://www2.hm.com/nl_nl/index.html 
 
   #### Screenshot(s) van de eerste pagina (small screen): 
-  hier de naam van de pagina  
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="omschrijving van de pagina">
+  Homepage 
+  <img src="images/homepage.png" width="375px" alt="omschrijving van de pagina">
+  ![Homepage](images/homepage.png)
 
   #### Screenshot(s) van de tweede pagina (small screen):
   hier de naam van de pagina  
