@@ -22,7 +22,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   Blauwe piste.
 
   #### Je focus:
-  hier je focus (kies uit responsive óf surface plane)
+  surface plane
  
 </details>
 
@@ -44,7 +44,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
  
 
   #### Screenshot(s) van de tweede pagina (small screen):
-  hier de naam van de pagina  
+  Detailpagina 
   <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="omschrijving van de pagina">
  
 </details>
@@ -60,26 +60,45 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   Lijst met je bevindingen die in de test naar voren kwamen:
 
   #### Screenreader
-  Hier korte omschrijving (met indien nodig afbeeldingen)
+  Bij de screenreader merkte ik dat:
+  1. de reader niet alle labels voorleest die belangrijk zijn.
+  2. hij bijvoorbeeld de prijs vertelt maar niet omschrijft waar hij de prijs van vertelt
+  3. zegt vaak "link" voordat hij het woord voorleest.
+  4. de pijltjes links en rechts leest hij woorden letter voor letter uit.
 
   Hier een omschrijving van hoe het opgelost kan worden (met indien nodig afbeeldingen)
 
 
   #### Muis en Toetsenbord 
-  Hier korte omschrijving (met indien nodig afbeeldingen)
+  bij de shift knop methode:
+  1. slaat hij soms buttons over 
+  2. de enter knop werkte goed
+  3. de shift knop gaat op alle labels die niet belangrijk zijn voor als je kleding bestelt.
 
   Hier een omschrijving van hoe het opgelost kan worden (met indien nodig afbeeldingen)
 
 
   #### Motoriek (shocks, elastiekjes)
-  Hier korte omschrijving (met indien nodig afbeeldingen)
+  Bij de parkinson band merkte ik dat:
+  1. ik niet klikte op de dingen die ik wilde selecteren
+  2. dat de buttons over het algemeen groter moeten
+  3. dat het voor radio buttens handig is dat de labels klikbaar zijn, anders is de taak echt onmogelijk om uit te voeren 
+  4. je meer spacing moet gebruiken om fouten te  voorkomen
 
-  Hier een omschrijving van hoe het opgelost kan worden (met indien nodig afbeeldingen)
+  Bij de elastiekjes merkte ik dat:
+  1. het moeilijk was om je telefoon vast te houden
+  2. dat je vaak dingen aanklikte die je niet wilde selecteren
+  3. het moeilijker is om kleine buttons aan te klikken
+  4. er grotere knoppen moeten komen
+  5. en de dingen verder uit elkaar moeten
 
 
   #### Visueel (brillen, contrast, kleurenblind, dark/light). 
-  Hier korte omschrijving (met indien nodig afbeeldingen)
-
+ Bij visueel merke ik dat:
+ 1. kleine tekst gewoon niet te lezen is als je slechtziend bent
+ 2. lange teksten uitputtend zijn om te lezen
+ 3. dat je grotere plaatjes nodig hebt
+ 4. dat er een duidelijk contrast moet zijn tussen de kleuren omdat het anders niet opvalt.
   Hier een omschrijving van hoe het opgelost kan worden (met indien nodig afbeeldingen)
 
 </details>

@@ -1,15 +1,18 @@
 /**************/
 /* CSS REMEDY */
 /**************/
-*, *::after, *::before {
-  box-sizing:border-box;  
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
 }
 
-button, summary {
+button,
+summary {
 	cursor: pointer;
 }
-
-
 
 
 
@@ -18,10 +21,24 @@ button, summary {
 /*********************/
 :root {
 	/* startje */
-	--color-text:#111;
-	--color-background:#eee;
+	--color-text: #222;
+	--Color-background: #fff;
+	--Color--title: #fff;
+	--Color-red-title: #D22D25;
+	--Color-beige: #F0EBE0;
 }
 
+
+
+@font-face {
+	font-family: Gilroy;
+	src: url(../assets/Gilroy/Gilroy-Light.otf);
+}
+
+@font-face {
+	font-family: Avenir;
+	src: url(../assets/Avenir/AvenirLTStd-Roman.otf );
+}
 
 
 
@@ -32,8 +49,316 @@ button, summary {
 
 /* jouw code */
 
-body {
-  color:var(--color-text);
-  background-color:var(--color-background);
+main {
+	padding-top: 4em;
 }
 
+body {
+	color: var(--color-text);
+	background-color: var(--Color-background);
+}
+
+
+
+
+/* -------------PAGINA 1-------------- */
+
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1.5em;
+	position: fixed;
+	z-index: 999;
+	background-color: var(--Color--title);
+	left: 0;
+	right: 0;
+	top: 0;
+
+}
+
+
+body header section:nth-of-type(1) {
+	display: flex;
+	gap: 1em;
+}
+
+/* Zorgt er voor dat alle images mooi meeschalen op iedere grootte */
+img {
+	width: 100%;
+	height: auto;
+	display: block;
+}
+
+/* H&M logo  */
+header a img {
+	width: 2.2em;
+
+}
+
+
+
+/* ----------------icon's navigatiebar------------------- */
+nav ul li img {
+	max-width: 1.5em;
+
+}
+
+nav ul {
+	list-style-type: none;
+	display: flex;
+	gap: 1.2em;
+}
+
+
+/* ------------------------Main------------------------ */
+h1 {
+	color: var(--Color--title);
+	font-family: "avenir", Arial, Helvetica, sans-serif;
+	position: absolute;
+	bottom: 2.3em;
+	z-index: 1;
+	font-size: 1.5em;
+	width: 100%;
+	text-align: center;
+	font-weight: bold;
+}
+
+p {
+	font-family: "gilroy", Arial, Helvetica, sans-serif;
+	color: var(--color-text);
+	font-size: .9em;
+
+}
+
+/*---------------------- Alle linkjes & lijsten---------------------- */
+a {
+	text-decoration: none;
+	position: relative;
+}
+
+li {
+	list-style-type: none;
+
+}
+
+/* -------------------"Levertijd" tekst--------------------- */
+main section {
+	padding: 0 1.5em;
+	margin-top: 1.5em;
+}
+
+main section:nth-of-type(1) {
+	text-align: center;
+	padding-top: 0em;
+
+
+}
+
+/* -------------------beige disney blok -------------------------*/
+main section:nth-of-type(2) {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	bottom: 1em;
+
+}
+
+main section:nth-of-type(2) div {
+	background: var(--Color-beige);
+	padding: 2.5em 1em;
+}
+
+/* -------------------disneyland titel ------------------------*/
+main section:nth-of-type(2) div h2 {
+	margin-bottom: .5em;
+	color: var(--Color-red-title);
+	font-family: "Avenir", Arial, Helvetica, sans-serif;
+
+
+}
+
+/* -----------------tekst onder de disney titel--------------- */
+main section:nth-of-type(2) div p {
+	font-size: .8em;
+	color: var(--color-text);
+
+
+}
+
+/* ---------------------"Grijze tinten" blok-------------------- */
+main section:nth-of-type(3) a img {
+	position: relative;
+	height: 20em;
+	object-fit: cover;
+	object-position: top;
+
+}
+
+main section:nth-of-type(3) a p {
+	position: absolute;
+	color: var(--Color--title);
+	bottom: 1em;
+	z-index: 1;
+	left: 0;
+	text-align: center;
+}
+
+
+/* ---------------Afbeeldingen naast elkaar krijgen + slider--------------*/
+main section:nth-of-type(4) ul {
+	position: relative;
+	display: flex;
+	gap: 1.2em;
+	padding: 0;
+	overflow-x: auto;
+
+}
+
+main section:nth-of-type(4) ul li {
+	display: flex;
+	flex-direction: column-reverse;
+}
+
+
+main section:nth-of-type(4) h2 {
+	font-family: "Avenir", Arial, Helvetica, sans-serif;
+	font-size: 1.3em;
+}
+
+main section:nth-of-type(4) h3 {
+	font-family: "Avenir", Arial, Helvetica, sans-serif;
+	font-size: .9em;
+	margin-bottom: 0;
+	margin-top: 5%;
+
+}
+
+main section:nth-of-type(4) p {
+	margin: 0;
+	top: -1;
+}
+
+main section:nth-of-type(4) img {
+	width: 9em;
+}
+
+/* ------------------------"H&M home" column-------------------------- */
+main section:nth-of-type(5) {
+	position: relative;
+	top: 1em;
+
+
+}
+
+main section:nth-of-type(5) h2 {
+	font-family: "Avenir", Arial, Helvetica, sans-serif;
+	position: absolute;
+	bottom: 2.5em;
+	z-index: 1;
+	color: var(--Color--title);
+	text-align: center;
+	font-size: 1.5em;
+	left: 1em;
+	right: 1em;
+
+
+}
+
+main section:nth-of-type(5) p {
+	font-family: "gilroy", Arial, Helvetica, sans-serif;
+	position: absolute;
+	bottom: 1.5em;
+	z-index: 1;
+	color: var(--Color--title);
+	text-align: center;
+	font-size: .9em;
+	left: 3em;
+	right: 3em;
+
+
+}
+
+main section:nth-of-type(5) img {
+	object-fit: cover;
+	object-position: bottom;
+	height: 20em;
+}
+
+/* --------------voor de beige achtergrond------------- */
+main section:nth-of-type(6),
+main section:nth-of-type(7),
+main section:nth-of-type(8) {
+	background-color: var(--Color-beige);
+
+}
+
+main section:nth-of-type(6) {
+	padding-top: 4em;
+	margin-top: 4em;
+
+}
+
+/* ---------zodat achtergrond beige blijft, styling van de sections-------- */
+main section:nth-of-type(7),
+main section:nth-of-type(8) {
+	margin-top: 0;
+	padding-top: 3em;
+
+
+}
+
+main section:nth-of-type(6) h2 {
+	text-align: center;
+	color: var(--color-text);
+	text-transform: uppercase;
+	font-family: "avenir", Arial, Helvetica, sans-serif;
+
+
+}
+
+
+main section:nth-of-type(6) h3 {
+	text-align: center;
+	padding-top: 1em;
+	font-size: 1em;
+	font-weight: lighter;
+	font-family: "Gilroy", Arial, Helvetica, sans-serif;
+
+}
+
+main section:nth-of-type(6) article,
+main section:nth-of-type(7) article,
+main section:nth-of-type(8) article {
+	background-color: white;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+
+}
+
+main section:nth-of-type(6) h4,
+main section:nth-of-type(7) h4,
+main section:nth-of-type(8) h4 {
+	font-family: "gilroy", Arial, Helvetica, sans-serif;
+	font-size: .8em;
+	padding-top: 2em;
+
+}
+
+main section:nth-of-type(6) h5,
+main section:nth-of-type(7) h5,
+main section:nth-of-type(8) h5 {
+	font-family: "Avenir", Arial, Helvetica, sans-serif;
+	font-size: 1em;
+	padding-top: 1em;
+
+}
+
+main section:nth-of-type(6) p,
+main section:nth-of-type(7) p,
+main section:nth-of-type(8) p {
+	font-size: .8em;
+	padding-top: 3em;
+	padding-bottom: 1em;
+}
