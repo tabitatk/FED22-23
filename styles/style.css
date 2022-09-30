@@ -21,14 +21,46 @@ summary {
 /*********************/
 :root {
 	/* startje */
+	--color-shadow: rgb(0 0 0 / 55%);
 	--color-text: #222;
 	--Color-background: #fff;
 	--Color--title: #fff;
 	--Color-red-title: #D22D25;
 	--Color-beige: #F0EBE0;
+	--color-prouct-background: #f6f6f6;
+	--color-hamburger: #fff;
+
+}
+
+/* Darktheme custum properties */
+@media (prefers-color-scheme:dark) {
+	:root {
+		--color-text: #f6f6f6;
+		--Color-background: #222;
+		--Color-red-title: #600404;
+		--Color-beige: #776D5F;
+		--color-prouct-background: #222;
+		--color-hamburger: #BABABA;
+
+
+	}
+}
+
+body {
+	color: var(--color-text);
+	background-color: var(--color-background);
 }
 
 
+
+/* verminder beeld bewegingen voor mensen met bijvoorbeeld epilepsie */
+@media (prefers-reduced-motion:reduce) {
+	* {
+		transition: none !important;
+	}
+}
+
+/* Fonts in design */
 
 @font-face {
 	font-family: Gilroy;
@@ -37,7 +69,7 @@ summary {
 
 @font-face {
 	font-family: Avenir;
-	src: url(../assets/Avenir/AvenirLTStd-Roman.otf );
+	src: url(../assets/Avenir/AvenirLTStd-Roman.otf);
 }
 
 
@@ -61,7 +93,7 @@ body {
 
 
 
-/* -------------PAGINA 1-------------- */
+/* -------------Algemene styling voor beide pagina's-------------- */
 
 header {
 	display: flex;
@@ -70,7 +102,7 @@ header {
 	padding: 1.5em;
 	position: fixed;
 	z-index: 999;
-	background-color: var(--Color--title);
+	background-color: var(--color-hamburger);
 	left: 0;
 	right: 0;
 	top: 0;
@@ -90,7 +122,90 @@ img {
 	display: block;
 }
 
-/* H&M logo  */
+/* --------------------HAMBURGER MENU ------------------*/
+
+header section:nth-of-type(2) {
+	position: fixed;
+	margin-left: -100vw;
+	top: 0%;
+	width: 85%;
+	background: var(--Color-background);
+	transition: all .3s ease-in-out;
+	height: 100vh;
+}
+
+header section:nth-of-type(2) div ul li a,
+header section:nth-of-type(2) div button {
+	display: none;
+}
+
+
+header section:nth-of-type(2).hamburgermenu {
+	margin-left: -1.6em;
+	box-shadow: 0px 0px 0px 999px var(--color-shadow);
+
+}
+
+header section:nth-of-type(2).hamburgermenu div ul li a,
+header section:nth-of-type(2).hamburgermenu div button {
+	display: block;
+}
+
+header section button {
+	background-color: transparent;
+	border: none;
+
+}
+
+header section:nth-of-type(2) ul {
+	display: flex;
+	flex-direction: column;
+	height: fit-content;
+	width: 100%;
+	padding: 0;
+}
+
+header section:nth-of-type(2) ul li {
+	display: flex;
+
+}
+
+header section:nth-of-type(2) ul li:nth-of-type(1) img {
+	width: 2em;
+	display: inline;
+	margin-right: 1em;
+}
+
+header section:nth-of-type(2) ul li:nth-of-type(1) a {
+	font-size: .8em;
+	margin-bottom: 2em;
+
+
+}
+
+header section:nth-of-type(2) ul li:nth-of-type(1) {
+	background-color: var(--Color-beige);
+
+}
+
+header section:nth-of-type(2) ul li a {
+	color: var(--color-text);
+	font-size: 1em;
+	font-family: "Avenir", Arial, Helvetica, sans-serif;
+	font-weight: 500;
+	left: 10%;
+	margin-top: 2em;
+}
+
+header section:nth-of-type(2) button {
+	position: absolute;
+	top: 1.5em;
+	right: 1em;
+	width: 3em;
+
+}
+
+/* ---------------------H&M LOGO ------------------------ */
 header a img {
 	width: 2.2em;
 
@@ -98,7 +213,7 @@ header a img {
 
 
 
-/* ----------------icon's navigatiebar------------------- */
+/* ----------------ICON's NAVIGATIEBAR------------------- */
 nav ul li img {
 	max-width: 1.5em;
 
@@ -111,8 +226,8 @@ nav ul {
 }
 
 
-/* ------------------------Main------------------------ */
-h1 {
+/* ------------------------HOMEPAGE main------------------------ */
+.homepage h1 {
 	color: var(--Color--title);
 	font-family: "avenir", Arial, Helvetica, sans-serif;
 	position: absolute;
@@ -131,7 +246,7 @@ p {
 
 }
 
-/*---------------------- Alle linkjes & lijsten---------------------- */
+/*---------------------- ALLE LINKJES & LIJSTEN---------------------- */
 a {
 	text-decoration: none;
 	position: relative;
@@ -142,21 +257,29 @@ li {
 
 }
 
-/* -------------------"Levertijd" tekst--------------------- */
+/* -------------------"LEVERTIJD" TEKST--------------------- */
 main section {
 	padding: 0 1.5em;
 	margin-top: 1.5em;
 }
 
-main section:nth-of-type(1) {
+.homepage main section:nth-of-type(1) {
 	text-align: center;
 	padding-top: 0em;
 
 
 }
 
-/* -------------------beige disney blok -------------------------*/
-main section:nth-of-type(2) {
+.homepage main section:nth-of-type(1) audio {
+	content: "🚚";
+	/* display: block;
+	width: 50%;
+	transform: scalex(-1); */
+
+}
+
+/* -------------------BEIGE DISNEY BLOK -------------------------*/
+.homepage main section:nth-of-type(2) {
 	display: flex;
 	flex-direction: column;
 	text-align: center;
@@ -164,13 +287,13 @@ main section:nth-of-type(2) {
 
 }
 
-main section:nth-of-type(2) div {
+.homepage main section:nth-of-type(2) div {
 	background: var(--Color-beige);
 	padding: 2.5em 1em;
 }
 
-/* -------------------disneyland titel ------------------------*/
-main section:nth-of-type(2) div h2 {
+/* -------------------DISNEYLAND TITEL ------------------------*/
+.homepage main section:nth-of-type(2) div h2 {
 	margin-bottom: .5em;
 	color: var(--Color-red-title);
 	font-family: "Avenir", Arial, Helvetica, sans-serif;
@@ -178,16 +301,16 @@ main section:nth-of-type(2) div h2 {
 
 }
 
-/* -----------------tekst onder de disney titel--------------- */
-main section:nth-of-type(2) div p {
+/* -----------------TEKST ONDER DE DISNEYLAND TITEL--------------- */
+.homepage main section:nth-of-type(2) div p {
 	font-size: .8em;
 	color: var(--color-text);
 
 
 }
 
-/* ---------------------"Grijze tinten" blok-------------------- */
-main section:nth-of-type(3) a img {
+/* ---------------------"GRIJZE TINTEN" BLOK-------------------- */
+.homepage main section:nth-of-type(3) a img {
 	position: relative;
 	height: 20em;
 	object-fit: cover;
@@ -195,7 +318,7 @@ main section:nth-of-type(3) a img {
 
 }
 
-main section:nth-of-type(3) a p {
+.homepage main section:nth-of-type(3) a p {
 	position: absolute;
 	color: var(--Color--title);
 	bottom: 1em;
@@ -205,8 +328,8 @@ main section:nth-of-type(3) a p {
 }
 
 
-/* ---------------Afbeeldingen naast elkaar krijgen + slider--------------*/
-main section:nth-of-type(4) ul {
+/* ---------------AFBEELDINGEN NAAST ELKAAR KRIJGEN + SLIDER--------------*/
+.homepage main section:nth-of-type(4) ul {
 	position: relative;
 	display: flex;
 	gap: 1.2em;
@@ -215,18 +338,18 @@ main section:nth-of-type(4) ul {
 
 }
 
-main section:nth-of-type(4) ul li {
+.homepage main section:nth-of-type(4) ul li {
 	display: flex;
 	flex-direction: column-reverse;
 }
 
 
-main section:nth-of-type(4) h2 {
+.homepage main section:nth-of-type(4) h2 {
 	font-family: "Avenir", Arial, Helvetica, sans-serif;
 	font-size: 1.3em;
 }
 
-main section:nth-of-type(4) h3 {
+.homepage main section:nth-of-type(4) h3 {
 	font-family: "Avenir", Arial, Helvetica, sans-serif;
 	font-size: .9em;
 	margin-bottom: 0;
@@ -234,24 +357,24 @@ main section:nth-of-type(4) h3 {
 
 }
 
-main section:nth-of-type(4) p {
+.homepage main section:nth-of-type(4) p {
 	margin: 0;
 	top: -1;
 }
 
-main section:nth-of-type(4) img {
+.homepage main section:nth-of-type(4) img {
 	width: 9em;
 }
 
-/* ------------------------"H&M home" column-------------------------- */
-main section:nth-of-type(5) {
+/* ------------------------"H&M HOME" COLUMN-------------------------- */
+.homepage main section:nth-of-type(5) {
 	position: relative;
 	top: 1em;
 
 
 }
 
-main section:nth-of-type(5) h2 {
+.homepage main section:nth-of-type(5) h2 {
 	font-family: "Avenir", Arial, Helvetica, sans-serif;
 	position: absolute;
 	bottom: 2.5em;
@@ -265,7 +388,7 @@ main section:nth-of-type(5) h2 {
 
 }
 
-main section:nth-of-type(5) p {
+.homepage main section:nth-of-type(5) p {
 	font-family: "gilroy", Arial, Helvetica, sans-serif;
 	position: absolute;
 	bottom: 1.5em;
@@ -279,86 +402,220 @@ main section:nth-of-type(5) p {
 
 }
 
-main section:nth-of-type(5) img {
+.homepage main section:nth-of-type(5) img {
 	object-fit: cover;
 	object-position: bottom;
-	height: 20em;
+
+
 }
 
-/* --------------voor de beige achtergrond------------- */
-main section:nth-of-type(6),
-main section:nth-of-type(7),
-main section:nth-of-type(8) {
+/* --------------BEIGE ACHTERGROND MAGAZINE------------- */
+.homepage main section:nth-of-type(6),
+.homepage main section:nth-of-type(7),
+.homepage main section:nth-of-type(8) {
 	background-color: var(--Color-beige);
 
 }
 
-main section:nth-of-type(6) {
+.homepage main section:nth-of-type(6) {
 	padding-top: 4em;
 	margin-top: 4em;
 
 }
 
-/* ---------zodat achtergrond beige blijft, styling van de sections-------- */
-main section:nth-of-type(7),
-main section:nth-of-type(8) {
+/* ---------RUIMTE TUSSEN DE SECTIONS + BEIGE ACHTERGROND +STYLING VAN SECTIONS & VIDEO -------- */
+.homepage main section:nth-of-type(7),
+.homepage main section:nth-of-type(8) {
 	margin-top: 0;
 	padding-top: 3em;
 
 
 }
 
-main section:nth-of-type(6) h2 {
+.homepage main section:nth-of-type(6) h2 {
 	text-align: center;
 	color: var(--color-text);
 	text-transform: uppercase;
 	font-family: "avenir", Arial, Helvetica, sans-serif;
-
-
 }
 
 
-main section:nth-of-type(6) h3 {
+.homepage main section:nth-of-type(6) h3 {
 	text-align: center;
 	padding-top: 1em;
+	padding-bottom: 2em;
 	font-size: 1em;
 	font-weight: lighter;
 	font-family: "Gilroy", Arial, Helvetica, sans-serif;
 
 }
 
-main section:nth-of-type(6) article,
-main section:nth-of-type(7) article,
-main section:nth-of-type(8) article {
-	background-color: white;
+.homepage main section:nth-of-type(6) article,
+.homepage main section:nth-of-type(7) article,
+.homepage main section:nth-of-type(8) article {
+	background-color: var(--Color-background);
 	display: flex;
 	flex-direction: column;
 	text-align: center;
 
 }
 
-main section:nth-of-type(6) h4,
-main section:nth-of-type(7) h4,
-main section:nth-of-type(8) h4 {
+.homepage main section:nth-of-type(8) article {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	background-color: var(--Color-beige);
+}
+
+.homepage main section:nth-of-type(6) h4,
+.homepage main section:nth-of-type(7) h4,
+.homepage main section:nth-of-type(8) h4 {
 	font-family: "gilroy", Arial, Helvetica, sans-serif;
 	font-size: .8em;
 	padding-top: 2em;
 
 }
 
-main section:nth-of-type(6) h5,
-main section:nth-of-type(7) h5,
-main section:nth-of-type(8) h5 {
+.homepage main section:nth-of-type(6) h5,
+.homepage main section:nth-of-type(7) h5,
+.homepage main section:nth-of-type(8) h5 {
 	font-family: "Avenir", Arial, Helvetica, sans-serif;
 	font-size: 1em;
 	padding-top: 1em;
 
 }
 
-main section:nth-of-type(6) p,
-main section:nth-of-type(7) p,
-main section:nth-of-type(8) p {
+.homepage main section:nth-of-type(6) p,
+.homepage main section:nth-of-type(7) p,
+.homepage main section:nth-of-type(8) p {
 	font-size: .8em;
 	padding-top: 3em;
 	padding-bottom: 1em;
+
+}
+
+/* ----------------------VIDEO -------------------*/
+
+.homepage section:nth-of-type(8) article video {
+	margin-bottom: 2em;
+
+}
+
+.homepage section:nth-of-type(8) article {
+	background-color: var(--Color-beige);
+}
+
+
+/* ------------------PRODUCT PAGINA------------------- */
+
+.product main section:nth-of-type(1) {
+	display: flex;
+	flex-direction: column;
+}
+
+.product main section:nth-of-type(1) p {
+	font-size: .6em;
+	text-align: center;
+	margin-top: 3em;
+}
+
+.product main section:nth-of-type(1) img:nth-of-type(1) {
+	margin-top: 1em;
+}
+
+.product main section:nth-of-type(1) h1 {
+	margin-top: 1.3em;
+	font-family: "Avenir", Arial, Helvetica, sans-serif;
+	font-size: 1em;
+}
+
+.product main section:nth-of-type(1) h2 {
+	font-family: "gilroy", Arial, Helvetica, sans-serif;
+	font-size: 1em;
+	margin-top: 1em;
+}
+
+.product main section:nth-of-type(1) h3 {
+	text-align: center;
+	font-size: .9em;
+	font-family: "avenir", Arial, Helvetica, sans-serif;
+	font-weight: 500;
+	margin-top: 2em;
+}
+
+/* ---------------STYLING VAN DE 2E SECTION----------------- */
+.product main section:nth-of-type(2) h2 {
+	font-family: "avenir", Arial, Helvetica, sans-serif;
+	font-size: 1em;
+	margin-top: 2em;
+}
+
+.product main section:nth-of-type(1) {
+	background-color: var(--color-prouct-background);
+}
+
+.product main section:nth-of-type(2) h3 {
+	font-family: "avenir", Arial, Helvetica, sans-serif;
+	font-size: .9em;
+	margin-top: 1em;
+}
+
+.product main section:nth-of-type(1) ul {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 2em;
+
+}
+
+.product main section:nth-of-type(1) ul li {
+	margin-left: .5em;
+	margin-right: .5em;
+}
+
+.product main section:nth-of-type(1) ul li img {
+	width: 4em;
+}
+
+.product main section:nth-of-type(1) ul li:nth-of-type(2) img {
+	border: 3px solid var(--Color-red-title);
+
+}
+
+.product section:nth-of-type(3) div {
+	display: grid;
+	grid-template-rows: repeat(4, auto);
+	grid-template-columns: repeat(2, 1fr);
+	gap: 1em;
+	padding-bottom: 8em;
+
+}
+
+.product section:nth-of-type(3) div img {
+	width: 100%;
+
+}
+
+/* iedere 3e img in de grid */
+
+.product section:nth-of-type(3) div img:nth-of-type(3n) {
+	grid-column: 1 / -1;
+	/* volledige breedte */
+
+}
+
+
+/* -------------Onderste sticky balk------------------ */
+.product section:nth-of-type(4) {
+
+	display: flex;
+	justify-content: space-between;
+	padding: 2em;
+	position: fixed;
+
+	background-color: var(--Color--title);
+	left: 0;
+	right: 0;
+	bottom: 0;
+
+
 }
