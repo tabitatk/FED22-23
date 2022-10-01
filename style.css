@@ -1,621 +1,692 @@
-/**************/
-/* CSS REMEDY */
-/**************/
+/* CSS Document */
 *,
 *::after,
 *::before {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
+  box-sizing: border-box;
+  font-family: 'Avenir';
+  margin: 0;
 }
 
-button,
-summary {
-	cursor: pointer;
-}
-
-
-
-/*********************/
 /* CUSTOM PROPERTIES */
-/*********************/
 :root {
-	/* startje */
-	--color-shadow: rgb(0 0 0 / 55%);
-	--color-text: #222;
-	--Color-background: #fff;
-	--Color--title: #fff;
-	--Color-red-title: #D22D25;
-	--Color-beige: #F0EBE0;
-	--color-prouct-background: #f6f6f6;
-	--color-hamburger: #fff;
-
+  --text-color: gray;
+  --textimg-color: white;
+  --background-color: white;
+  --background-button: lightgray;
+  --color-buttons: #fcfcfc;
+  --background-colorbutton: black;
+  --main-color: black;
+  --hartje-color: red;
+  --active-color: red;
+  --hover-color: lightpink;
+  --focus-color: lightblue;
 }
 
-/* Darktheme custum properties */
-@media (prefers-color-scheme:dark) {
-	:root {
-		--color-text: #f6f6f6;
-		--Color-background: #222;
-		--Color-red-title: #600404;
-		--Color-beige: #776D5F;
-		--color-prouct-background: #222;
-		--color-hamburger: #BABABA;
 
+/* DARKTHEME CUSTOM PROPERTIES */
+body {
+  --txt-color: #222;
+  --bkg-color: #fff;
+  --button-text: #fff;
+  --button-color: #222;
+  --magazin-color: #f4eddd;
+}
 
-	}
+body.dark-theme {
+  --txt-color: #eee;
+  --button-text: #222;
+  --bkg-color: #121212;
+  --button-color: #eee;
+  --magazin-color: #222;
 }
 
 body {
-	color: var(--color-text);
-	background-color: var(--color-background);
+  color: var(--txt-color);
+  background-color: var(--bkg-color);
 }
 
+h1 {
+  display: none;
+}
 
 
-/* verminder beeld bewegingen voor mensen met bijvoorbeeld epilepsie */
-@media (prefers-reduced-motion:reduce) {
-	* {
-		transition: none !important;
-	}
-}
 
-/* Fonts in design */
+/* PAGINA 1 */
+/* HEADER */
 
-@font-face {
-	font-family: Gilroy;
-	src: url(../assets/Gilroy/Gilroy-Light.otf);
+header img {
+  position: absolute;
+  top: 1.5em;
+  left: 27%;
+  width: 2em;
 }
 
-@font-face {
-	font-family: Avenir;
-	src: url(../assets/Avenir/AvenirLTStd-Roman.otf);
+header button {
+  position: absolute;
+  top: 3%;
+  left: 6%;
+  padding: .7em;
+  border: none;
+  background-color: var(--bkg-color);
+  color: var(--txt-color);
+  cursor: pointer;
 }
-
 
-
-
-/****************/
-/* JOUW STYLING */
-/****************/
+header button:hover {
+  background-color: var(--hover-color);
+}
 
-/* jouw code */
+header button:active {
+  background-color: var(--active-color);
+}
 
-main {
-	padding-top: 4em;
+header button:focus {
+  background-color: var(--focus-color);
 }
 
-body {
-	color: var(--color-text);
-	background-color: var(--Color-background);
+header nav ul {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 9999;
+  transform: translateX(-110%);
 }
 
+header nav li:nth-child(6),
+header nav li:nth-child(7) {
+  text-transform: uppercase;
+}
 
+header nav a {
+  color: var(--txt-color);
+  text-decoration: none;
+}
 
 
-/* -------------Algemene styling voor beide pagina's-------------- */
 
-header {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 1.5em;
-	position: fixed;
-	z-index: 999;
-	background-color: var(--color-hamburger);
-	left: 0;
-	right: 0;
-	top: 0;
+/* NAVIGATIE GEOPEND */
 
+body.toonMenu {
+  overflow: hidden;
 }
-
 
-body header section:nth-of-type(1) {
-	display: flex;
-	gap: 1em;
+body.toonMenu header nav ul {
+  display: block;
+  width: 85%;
+  transform: translatex(0%);
+  background-color: var(--bkg-color);
+  transition: 1s;
 }
 
-/* Zorgt er voor dat alle images mooi meeschalen op iedere grootte */
-img {
-	width: 100%;
-	height: auto;
-	display: block;
+body.toonMenu header nav ul li:first-of-type {
+  margin: 0;
+  align-items: center;
+  justify-content: center;
+  height: 10%;
+  background-color: var(--hover-color);
+  font-weight: 100;
+  text-transform: uppercase;
 }
 
-/* --------------------HAMBURGER MENU ------------------*/
-
-header section:nth-of-type(2) {
-	position: fixed;
-	margin-left: -100vw;
-	top: 0%;
-	width: 85%;
-	background: var(--Color-background);
-	transition: all .3s ease-in-out;
-	height: 100vh;
+body.toonMenu header nav li:nth-child(n+2) {
+  padding-left: 1em;
 }
 
-header section:nth-of-type(2) div ul li a,
-header section:nth-of-type(2) div button {
-	display: none;
+body.toonMenu header nav li {
+  display: flex;
+  margin-top: 2em;
+  font-weight: 500;
 }
-
 
-header section:nth-of-type(2).hamburgermenu {
-	margin-left: -1.6em;
-	box-shadow: 0px 0px 0px 999px var(--color-shadow);
-
+body.toonMenu header nav ul li:nth-of-type(2):hover {
+  background-color: var(--hover-color);
 }
 
-header section:nth-of-type(2).hamburgermenu div ul li a,
-header section:nth-of-type(2).hamburgermenu div button {
-	display: block;
+body.toonMenu header nav ul li:nth-of-type(2):active {
+  background-color: var(--active-color);
 }
-
-header section button {
-	background-color: transparent;
-	border: none;
 
+body.toonMenu header nav ul li:nth-of-type(2):focus {
+  background-color: var(--focus-color);
 }
 
-header section:nth-of-type(2) ul {
-	display: flex;
-	flex-direction: column;
-	height: fit-content;
-	width: 100%;
-	padding: 0;
+body nav img {
+  position: absolute;
+  top: 2%;
+  left: 15%;
 }
 
-header section:nth-of-type(2) ul li {
-	display: flex;
-
+header nav button::before {
+  content: "\2630";
 }
 
-header section:nth-of-type(2) ul li:nth-of-type(1) img {
-	width: 2em;
-	display: inline;
-	margin-right: 1em;
+body.toonMenu header nav button::before {
+  content: "\00d7";
 }
-
-header section:nth-of-type(2) ul li:nth-of-type(1) a {
-	font-size: .8em;
-	margin-bottom: 2em;
-
 
+body.toonMenu header nav button {
+  position: fixed;
+  top: 50%;
+  left: 81%;
+  z-index: 1;
+  color: var(--txt-color);
+  background-color: var(--background-button);
 }
 
-header section:nth-of-type(2) ul li:nth-of-type(1) {
-	background-color: var(--Color-beige);
-
+/* darkmode button */
+.btn-toggle {
+  position: absolute;
+  top: 4%;
+  right: 20%;
+  width: 25%;
+  height: 5%;
+  border: none;
+  background-color: var(--button-color);
+  color: var(--button-text);
 }
 
-header section:nth-of-type(2) ul li a {
-	color: var(--color-text);
-	font-size: 1em;
-	font-family: "Avenir", Arial, Helvetica, sans-serif;
-	font-weight: 500;
-	left: 10%;
-	margin-top: 2em;
+/* geel hartje */
+.geelhartje {
+  position: absolute;
+  top: 4%;
+  right: 5%;
+  background: none;
+  border: none;
+  font-size: 1.5em;
+  cursor: pointer;
 }
-
-header section:nth-of-type(2) button {
-	position: absolute;
-	top: 1.5em;
-	right: 1em;
-	width: 3em;
 
+span {
+  position: absolute;
+  top: -10%;
+  left: 60%;
+  width: 50%;
+  height: 50%;
+  border-radius: 50%;
+  background-color: var(--hartje-color);
+  color: var(--txt-color);
+  font-size: 60%;
 }
 
-/* ---------------------H&M LOGO ------------------------ */
-header a img {
-	width: 2.2em;
 
+/* SECTION - LEVERING*/
+section:first-of-type h2 {
+  font-size: 100%;
+  font-weight: 100;
+  margin: 6em 0em 2em 4em;
 }
-
-
 
-/* ----------------ICON's NAVIGATIEBAR------------------- */
-nav ul li img {
-	max-width: 1.5em;
-
+.pagina1 section:nth-of-type(1) h2::after {
+  content: "🚚";
+  display: block;
+  width: 50%;
+  transform: scalex(-1);
 }
 
-nav ul {
-	list-style-type: none;
-	display: flex;
-	gap: 1.2em;
+section:nth-of-type(1) h2:hover::after {
+  transform: scalex(-1) skewX(-10deg);
 }
 
 
-/* ------------------------HOMEPAGE main------------------------ */
-.homepage h1 {
-	color: var(--Color--title);
-	font-family: "avenir", Arial, Helvetica, sans-serif;
-	position: absolute;
-	bottom: 2.3em;
-	z-index: 1;
-	font-size: 1.5em;
-	width: 100%;
-	text-align: center;
-	font-weight: bold;
-}
 
-p {
-	font-family: "gilroy", Arial, Helvetica, sans-serif;
-	color: var(--color-text);
-	font-size: .9em;
+/* ANIMATIES */
+@keyframes vrachtwagen {
+  0% {
+    transform: translateX(100%);
+  }
 
+  100% {
+    transform: translateX(0%)
+  }
 }
 
-/*---------------------- ALLE LINKJES & LIJSTEN---------------------- */
-a {
-	text-decoration: none;
-	position: relative;
+section:nth-of-type(1) h2:hover::after {
+  animation-name: vrachtwagen;
+  animation-duration: 2s;
+  animation-iteration-count: 3;
 }
 
-li {
-	list-style-type: none;
+@keyframes geelhartje {
 
-}
+  0%,
+  25% {
+    transform: scale(1);
+  }
 
-/* -------------------"LEVERTIJD" TEKST--------------------- */
-main section {
-	padding: 0 1.5em;
-	margin-top: 1.5em;
-}
+  45% {
+    transform: scale(1.2);
+  }
 
-.homepage main section:nth-of-type(1) {
-	text-align: center;
-	padding-top: 0em;
+  50% {
+    transform: scale(.85);
+  }
 
+  55% {
+    transform: scale(1.2);
+  }
 
+  100% {
+    transform: scale(1);
+  }
 }
 
-.homepage main section:nth-of-type(1) audio {
-	content: "🚚";
-	/* display: block;
-	width: 50%;
-	transform: scalex(-1); */
 
+.geelhartje:hover {
+  animation-name: geelhartje;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
 }
 
-/* -------------------BEIGE DISNEY BLOK -------------------------*/
-.homepage main section:nth-of-type(2) {
-	display: flex;
-	flex-direction: column;
-	text-align: center;
-	bottom: 1em;
 
-}
 
-.homepage main section:nth-of-type(2) div {
-	background: var(--Color-beige);
-	padding: 2.5em 1em;
+/* SECTION - SHARING IS ALWAYS IN SEASON */
+section:nth-of-type(2) {
+  position: relative;
+  width: 85%;
+  height: 150px;
+  margin: 0 7.5% 5%;
 }
 
-/* -------------------DISNEYLAND TITEL ------------------------*/
-.homepage main section:nth-of-type(2) div h2 {
-	margin-bottom: .5em;
-	color: var(--Color-red-title);
-	font-family: "Avenir", Arial, Helvetica, sans-serif;
+section:nth-of-type(2) img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
+section:nth-of-type(2) h2 {
+  position: absolute;
+  bottom: 50%;
+  left: 15%;
+  width: 70%;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 130%;
+  font-weight: 100;
+  text-align: center;
+  color: var(--textimg-color);
+}
 
+section:nth-of-type(2) p {
+  position: absolute;
+  top: 50%;
+  left: 15%;
+  width: 70%;
+  font-size: 80%;
+  text-align: center;
+  color: var(--textimg-color);
 }
 
-/* -----------------TEKST ONDER DE DISNEYLAND TITEL--------------- */
-.homepage main section:nth-of-type(2) div p {
-	font-size: .8em;
-	color: var(--color-text);
 
 
+/* SECTION - ALL EYES ON YOU */
+section:nth-of-type(3) {
+  position: relative;
+  width: 85%;
+  margin: 0 7.5% 5%;
 }
 
-/* ---------------------"GRIJZE TINTEN" BLOK-------------------- */
-.homepage main section:nth-of-type(3) a img {
-	position: relative;
-	height: 20em;
-	object-fit: cover;
-	object-position: top;
+section:nth-of-type(3) img {
+  width: 100%;
+}
 
+/* states */
+section:nth-of-type(3) img:hover {
+  opacity: 60%;
 }
 
-.homepage main section:nth-of-type(3) a p {
-	position: absolute;
-	color: var(--Color--title);
-	bottom: 1em;
-	z-index: 1;
-	left: 0;
-	text-align: center;
+section:nth-of-type(3) img:active {
+  border-radius: 50%;
 }
 
+section:nth-of-type(3) img:focus {
+  opacity: 0%;
+}
 
-/* ---------------AFBEELDINGEN NAAST ELKAAR KRIJGEN + SLIDER--------------*/
-.homepage main section:nth-of-type(4) ul {
-	position: relative;
-	display: flex;
-	gap: 1.2em;
-	padding: 0;
-	overflow-x: auto;
 
+section:nth-of-type(3) h2 {
+  position: absolute;
+  left: 25%;
+  bottom: 35%;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 130%;
+  font-weight: 100;
+  text-align: center;
+  color: var(--textimg-color);
 }
 
-.homepage main section:nth-of-type(4) ul li {
-	display: flex;
-	flex-direction: column-reverse;
+section:nth-of-type(3) p {
+  position: absolute;
+  top: 70%;
+  left: 10%;
+  width: 80%;
+  font-size: 90%;
+  text-align: center;
+  color: var(--textimg-color);
 }
 
-
-.homepage main section:nth-of-type(4) h2 {
-	font-family: "Avenir", Arial, Helvetica, sans-serif;
-	font-size: 1.3em;
-}
 
-.homepage main section:nth-of-type(4) h3 {
-	font-family: "Avenir", Arial, Helvetica, sans-serif;
-	font-size: .9em;
-	margin-bottom: 0;
-	margin-top: 5%;
 
+/* SECTION - TRENDING RIGHT NOW */
+section:nth-of-type(4) {
+  margin-left: 5%;
 }
 
-.homepage main section:nth-of-type(4) p {
-	margin: 0;
-	top: -1;
+ul:nth-child(2) {
+  display: flex;
+  list-style-type: none;
+  gap: 2.2em;
+  padding: 0;
+  overflow-x: auto;
 }
 
-.homepage main section:nth-of-type(4) img {
-	width: 9em;
+section:nth-of-type(4) ul li:nth-of-type(7) h3,
+ul li:nth-of-type(7) h4 {
+  margin-left: .5em;
 }
 
-/* ------------------------"H&M HOME" COLUMN-------------------------- */
-.homepage main section:nth-of-type(5) {
-	position: relative;
-	top: 1em;
-
-
+section:nth-of-type(4) li {
+  display: flex;
+  flex-direction: column-reverse;
+  width: 2em;
+  margin-left: 2%;
 }
 
-.homepage main section:nth-of-type(5) h2 {
-	font-family: "Avenir", Arial, Helvetica, sans-serif;
-	position: absolute;
-	bottom: 2.5em;
-	z-index: 1;
-	color: var(--Color--title);
-	text-align: center;
-	font-size: 1.5em;
-	left: 1em;
-	right: 1em;
+section:nth-of-type(4) h2 {
+  font-size: 110%;
+  margin-bottom: 5%;
+}
 
+section:nth-of-type(4) h3 {
+  color: var(--text-color);
+  font-size: 100%;
+  margin-bottom: 100%;
+}
 
+section:nth-of-type(4) h4 {
+  margin-top: 40%;
 }
 
-.homepage main section:nth-of-type(5) p {
-	font-family: "gilroy", Arial, Helvetica, sans-serif;
-	position: absolute;
-	bottom: 1.5em;
-	z-index: 1;
-	color: var(--Color--title);
-	text-align: center;
-	font-size: .9em;
-	left: 3em;
-	right: 3em;
+ul li:nth-of-type(4) h3,
+ul li:nth-of-type(4) h4 {
+  padding: 0em .5em;
+}
 
+section:nth-of-type(4) img {
+  width: 200%;
+  border-radius: 50%;
+}
 
+section:nth-of-type(4) li:nth-of-type(8) h3 {
+  text-transform: uppercase;
+  width: 320%;
 }
 
-.homepage main section:nth-of-type(5) img {
-	object-fit: cover;
-	object-position: bottom;
 
 
+/* SECTION - KERST */
+section:nth-of-type(5) {
+  position: relative;
+  width: 86%;
+  margin: 0 7.5% 5%;
 }
 
-/* --------------BEIGE ACHTERGROND MAGAZINE------------- */
-.homepage main section:nth-of-type(6),
-.homepage main section:nth-of-type(7),
-.homepage main section:nth-of-type(8) {
-	background-color: var(--Color-beige);
-
+section:nth-of-type(5) img {
+  width: 100%;
 }
 
-.homepage main section:nth-of-type(6) {
-	padding-top: 4em;
-	margin-top: 4em;
+section:nth-of-type(5) h2 {
+  position: absolute;
+  left: 20%;
+  bottom: 40%;
+  width: 60%;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 150%;
+  font-weight: 100;
+  text-align: center;
+  color: var(--textimg-color);
+}
 
+section:nth-of-type(5) p {
+  position: absolute;
+  left: 10%;
+  top: 70%;
+  width: 80%;
+  font-size: 100%;
+  text-align: center;
+  color: var(--textimg-color);
 }
 
-/* ---------RUIMTE TUSSEN DE SECTIONS + BEIGE ACHTERGROND +STYLING VAN SECTIONS & VIDEO -------- */
-.homepage main section:nth-of-type(7),
-.homepage main section:nth-of-type(8) {
-	margin-top: 0;
-	padding-top: 3em;
 
 
+/* SECTION - MAGAZINE */
+section:nth-of-type(6) {
+  position: relative;
+  height: 60em;
+  background-color: var(--magazin-color);
 }
 
-.homepage main section:nth-of-type(6) h2 {
-	text-align: center;
-	color: var(--color-text);
-	text-transform: uppercase;
-	font-family: "avenir", Arial, Helvetica, sans-serif;
+section:nth-of-type(6) h2 {
+  position: absolute;
+  top: 10%;
+  left: 30%;
+  font-size: 150%;
+  text-align: center;
+  text-transform: uppercase;
 }
 
-
-.homepage main section:nth-of-type(6) h3 {
-	text-align: center;
-	padding-top: 1em;
-	padding-bottom: 2em;
-	font-size: 1em;
-	font-weight: lighter;
-	font-family: "Gilroy", Arial, Helvetica, sans-serif;
-
+article:first-of-type {
+  color: var(--main-color);
 }
 
-.homepage main section:nth-of-type(6) article,
-.homepage main section:nth-of-type(7) article,
-.homepage main section:nth-of-type(8) article {
-	background-color: var(--Color-background);
-	display: flex;
-	flex-direction: column;
-	text-align: center;
-
+section:nth-of-type(6) h3 {
+  position: absolute;
+  top: 15%;
+  left: 30%;
+  font-size: 80%;
+  text-align: center;
+  font-weight: 100;
 }
 
-.homepage main section:nth-of-type(8) article {
-	display: flex;
-	flex-direction: column;
-	text-align: center;
-	background-color: var(--Color-beige);
+section:nth-of-type(6) article h3 {
+  position: absolute;
+  top: 37%;
+  left: 35%;
+  font-size: 90%;
+  font-weight: 100;
+  text-transform: uppercase;
+  z-index: 200;
 }
-
-.homepage main section:nth-of-type(6) h4,
-.homepage main section:nth-of-type(7) h4,
-.homepage main section:nth-of-type(8) h4 {
-	font-family: "gilroy", Arial, Helvetica, sans-serif;
-	font-size: .8em;
-	padding-top: 2em;
 
+section:nth-of-type(6) h4 {
+  position: absolute;
+  top: 42%;
+  left: 20%;
+  font-size: 90%;
+  width: 60%;
+  text-align: center;
+  z-index: 200;
 }
 
-.homepage main section:nth-of-type(6) h5,
-.homepage main section:nth-of-type(7) h5,
-.homepage main section:nth-of-type(8) h5 {
-	font-family: "Avenir", Arial, Helvetica, sans-serif;
-	font-size: 1em;
-	padding-top: 1em;
-
+section:nth-of-type(6) p {
+  position: absolute;
+  top: 50%;
+  left: 35%;
+  font-size: 80%;
+  font-weight: 700;
+  text-align: center;
+  z-index: 200;
 }
 
-.homepage main section:nth-of-type(6) p,
-.homepage main section:nth-of-type(7) p,
-.homepage main section:nth-of-type(8) p {
-	font-size: .8em;
-	padding-top: 3em;
-	padding-bottom: 1em;
+section:nth-of-type(6) img:first-of-type {
+  position: absolute;
+  top: 20%;
+  left: 15%;
+  width: 70%;
+}
 
+section:nth-of-type(6) img:nth-of-type(2) {
+  position: absolute;
+  top: 35%;
+  left: 15%;
+  width: 70%;
+  height: 20%;
 }
 
-/* ----------------------VIDEO -------------------*/
 
-.homepage section:nth-of-type(8) article video {
-	margin-bottom: 2em;
 
+/* SECTION - MAGAZINE TWEEDE ARTIKEL */
+section:nth-of-type(7) {
+  color: var(--main-color);
 }
 
-.homepage section:nth-of-type(8) article {
-	background-color: var(--Color-beige);
+section:nth-of-type(7) img:first-of-type {
+  position: absolute;
+  top: 300%;
+  left: 15%;
+  width: 70%;
 }
-
 
-/* ------------------PRODUCT PAGINA------------------- */
-
-.product main section:nth-of-type(1) {
-	display: flex;
-	flex-direction: column;
+section:nth-of-type(7) img:nth-of-type(2) {
+  position: absolute;
+  top: 326%;
+  left: 15%;
+  width: 70%;
+  height: 28%;
 }
 
-.product main section:nth-of-type(1) p {
-	font-size: .6em;
-	text-align: center;
-	margin-top: 3em;
+section:nth-of-type(7) article h3 {
+  position: absolute;
+  top: 330%;
+  left: 35%;
+  font-size: 90%;
+  font-weight: 100;
+  text-transform: uppercase;
+  z-index: 200;
 }
 
-.product main section:nth-of-type(1) img:nth-of-type(1) {
-	margin-top: 1em;
+section:nth-of-type(7) h4 {
+  position: absolute;
+  top: 337%;
+  left: 32%;
+  font-size: 100%;
+  text-align: center;
+  z-index: 200;
 }
 
-.product main section:nth-of-type(1) h1 {
-	margin-top: 1.3em;
-	font-family: "Avenir", Arial, Helvetica, sans-serif;
-	font-size: 1em;
+section:nth-of-type(7) p {
+  position: absolute;
+  top: 345%;
+  left: 35%;
+  font-size: 80%;
+  font-weight: 700;
+  text-align: center;
+  z-index: 200;
 }
 
-.product main section:nth-of-type(1) h2 {
-	font-family: "gilroy", Arial, Helvetica, sans-serif;
-	font-size: 1em;
-	margin-top: 1em;
-}
 
-.product main section:nth-of-type(1) h3 {
-	text-align: center;
-	font-size: .9em;
-	font-family: "avenir", Arial, Helvetica, sans-serif;
-	font-weight: 500;
-	margin-top: 2em;
-}
 
-/* ---------------STYLING VAN DE 2E SECTION----------------- */
-.product main section:nth-of-type(2) h2 {
-	font-family: "avenir", Arial, Helvetica, sans-serif;
-	font-size: 1em;
-	margin-top: 2em;
+/* PAGINA 2 */
+/* SECTION 1 */
+.pagina2 section:nth-of-type(1) h2 {
+  position: absolute;
+  top: 57%;
+  left: 25%;
+  font-weight: 500;
 }
 
-.product main section:nth-of-type(1) {
-	background-color: var(--color-prouct-background);
+.pagina2 section:nth-of-type(1) p {
+  margin: 22% 0% 0% 13%;
+  font-weight: 500;
+  font-size: 70%;
 }
 
-.product main section:nth-of-type(2) h3 {
-	font-family: "avenir", Arial, Helvetica, sans-serif;
-	font-size: .9em;
-	margin-top: 1em;
+.pagina2 section:nth-of-type(1) img {
+  width: 85%;
+  margin-top: 10%;
+  margin-left: 7%;
 }
-
-.product main section:nth-of-type(1) ul {
-	display: flex;
-	justify-content: center;
-	margin-bottom: 2em;
 
+.pagina2 section:nth-of-type(1) img:nth-of-type(2) {
+  width: 40%;
+  margin: 15% 0% 0% 30%;
+  left: 23%;
+  border: 1px solid;
 }
 
-.product main section:nth-of-type(1) ul li {
-	margin-left: .5em;
-	margin-right: .5em;
+/* paars hartje */
+.pagina2 section:nth-of-type(1) button {
+  position: absolute;
+  top: 72%;
+  right: 15%;
+  background: none;
+  border: none;
+  font-size: 1.5em;
+  cursor: pointer;
 }
 
-.product main section:nth-of-type(1) ul li img {
-	width: 4em;
+/* SECTION TEKST  */
+.pagina2 section:nth-of-type(2) p {
+  position: absolute;
+  top: 15%;
+  left: 0%;
+  width: 100%;
+  font-size: 120%;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  text-align: left;
+  color: var(--txt-color);
 }
 
-.product main section:nth-of-type(1) ul li:nth-of-type(2) img {
-	border: 3px solid var(--Color-red-title);
 
-}
-
-.product section:nth-of-type(3) div {
-	display: grid;
-	grid-template-rows: repeat(4, auto);
-	grid-template-columns: repeat(2, 1fr);
-	gap: 1em;
-	padding-bottom: 8em;
 
+/* SECTION AFBEELDINGEN */
+.pagina2 section:nth-of-type(3) div {
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.product section:nth-of-type(3) div img {
-	width: 100%;
-
+.pagina2 section:nth-of-type(3) img {
+  width: 48%;
+  margin: 1%;
 }
-
-/* iedere 3e img in de grid */
 
-.product section:nth-of-type(3) div img:nth-of-type(3n) {
-	grid-column: 1 / -1;
-	/* volledige breedte */
-
+.pagina2 section:nth-of-type(3) img:nth-of-type(3) {
+  width: 98%;
 }
 
 
-/* -------------Onderste sticky balk------------------ */
-.product section:nth-of-type(4) {
 
-	display: flex;
-	justify-content: space-between;
-	padding: 2em;
-	position: fixed;
+/* SECTION BUTTONS */
+.pagina2 section:nth-of-type(4) {
+  position: fixed;
+  margin: 0;
+  bottom: 0;
+  width: 100%;
+  height: 15%;
+  background-color: var(--bkg-color);
+}
 
-	background-color: var(--Color--title);
-	left: 0;
-	right: 0;
-	bottom: 0;
+.pagina2 section:nth-of-type(4) h2 {
+  font-weight: 500;
+  font-size: 100%;
+  margin-top: .5em;
+}
 
+.pagina2 section:nth-of-type(4) button:first-of-type {
+  padding: .9em 3em;
+  font-weight: 100;
+  font-size: 70%;
+  background-color: var(--background-color);
+  border: .5px solid;
+}
 
+.pagina2 section:nth-of-type(4) button:last-of-type {
+  padding: 1em 3.7em;
+  font-weight: 100;
+  text-transform: uppercase;
+  font-size: 70%;
+  color: var(--textimg-color);
+  background-color: var(--background-colorbutton);
+  border: .5px solid;
 }
