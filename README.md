@@ -92,6 +92,11 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   4. er grotere knoppen moeten komen
   5. en de dingen verder uit elkaar moeten
 
+  <img src="readme-images/elastiek.jpg" width="375px" alt="elastiek foto test">
+  <img src="readme-images/ballon.jpg" width="375px" alt="ballon foto test">
+  <img src="readme-images/parkinson.jpg" width="375px" alt="ballon foto test">
+
+
 
   #### Visueel (brillen, contrast, kleurenblind, dark/light). 
  Bij visueel merke ik dat:
@@ -204,7 +209,7 @@ Tabita
   <img src="readme-images/magazine-code.png" width="375px" alt="stukje code van voortgang op magazine sections">
 
   verder heb ik deze ook nog mijn hamburger menu gemaakt. ik begon met de html code. en het hamburger icoontje heb ik gemaakt in adobe XD.
- <img src="readme-images/hamburger.png" width="375px" alt="html code van hamburger menu">
+ <img src="readme-images/hamburger-menu.png" width="375px" alt="html code van hamburger menu">
 
  verder ben ik niet gekomen deze week omdat ik ook een tentamen had waar ik voor moest leren.
 
@@ -243,13 +248,11 @@ Tabita
   Lijst met je bevindingen die in de test naar voren kwamen (geef ook aan wat er verbeterd is):
 
   #### Screenreader
-  Hier korte omschrijving (met indien nodig afbeeldingen)
-
-  Hier een omschrijving van hoe het opgelost kan worden (met indien nodig afbeeldingen)
-
+  Screenreader:
 
   #### Muis en Toetsenbord 
-  Hier korte omschrijving (met indien nodig afbeeldingen)
+  tab-test:
+
 
   Hier een omschrijving van hoe het opgelost kan worden (met indien nodig afbeeldingen)
 
@@ -278,7 +281,10 @@ Homepagina: nergens last van als je je hoofd een beetje draait.
 Gele bril:
 Homepagina: nergens last van, overal goed genoeg contrast
 2de pagina: zelfde geldt voor deze pagina
-
+<img src="readme-images/product.jpg" width="375px" alt="stukje code van verbetering">
+<img src="readme-images/product.jpg" width="375px" alt="stukje code van verbetering">
+<img src="readme-images/product.jpg" width="375px" alt="stukje code van verbetering">
+<img src="readme-images/product.jpg" width="375px" alt="stukje code van verbetering">
 </details>
 
 
@@ -299,7 +305,7 @@ Homepagina: nergens last van, overal goed genoeg contrast
 
 ik had wat problemen met de kleine afbeeldingen omdat het in 1 section stond dus als ik deze images stylden dan ging de grote image erboven ook mee en ik kreeg ze dus niet zo goed naast elkaar
 
- <img src="readme-images/product.svg" width="375px" alt="stukje code van verbetering">
+ <img src="readme-images/product.jpg" width="375px" alt="stukje code van verbetering">
 
  ik heb dit probleem uiteindelijk opgelost door deze 2 afbeeldingen in een lijstje te zetten zodat ik die apart kon aanspreken. verder ging het erg vlot met de styling van mijn 2e pagina.
 
