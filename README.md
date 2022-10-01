@@ -116,8 +116,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### dynamisch deel (bijv menu): 
   <img src="readme-images/breakdown-menu.png" width="375px" alt="breakdown van een dynamisch deel">
 
-  ### wellicht nog een dynamisch deel (bijv filter): 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van nog een dynamisch deel">
+  
 
 </details>
 
@@ -137,7 +136,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   dit was hoe het eruit zag met de bijbehorende code. dit ging dus niet helemaal zoals ik wilde maar vervolgens heb ik het hier dus mee gedaan om het goed te krijgen. ik wist niet of dit de juiste manier was dus dit was een onderdeel waar ik nog vragen voor had bij de voortgangsgesprekken.
 
-   <img src="readme-images/disney.stuk.png" width="375px" alt="stukje van voorgang op het disney blok">
+   <img src="readme-images/disney-stuk.jpg" width="375px" alt="stukje van voorgang op het disney blok">
     <img src="readme-images/code.jpg" width="375px" alt="stuk code die bij het disney blok hoort">
 
 Nadat ik het beige blokje heb opgelost ben ik verder gegaan met het stuk eronder voor het grijstinten gedeelte. ik heb eigenlijk hier weer position absolute en relative gebruikt. dus nogmaals wist ik niet of dit de juiste methode was.
@@ -149,7 +148,7 @@ na het de eerste 2 sections van de main ben ik begonnen aan de slider. dit was n
  vervolgens besloot ik om de elementen met flexbox eerst naast elkaar te krijgen voordat ik de slider ging maken. hier kwam ik nogal tegen wat kleine probleempjes aan wat best frustrerend was. hier heb ik nog wat foto's van wat dingen die ik heb geprobeerd met de code.
 
  <img src="readme-images/slider-2.jpg" width="375px" alt="stukje van voorgang op de slider">
-  <img src="readme-images/slider-2-code" width="375px" alt="stukje code van voorgang op de slider">
+  <img src="readme-images/slider-2-code.jpg" width="375px" alt="stukje code van voorgang op de slider">
 
 Na heel veel trial en error proberen en te spelen met code ben ik hier gekomen.
  <img src="readme-images/slider-3.jpg" width="375px" alt="stukje van voorgang op de slider">
