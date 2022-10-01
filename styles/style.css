@@ -282,7 +282,7 @@ main section {
 
 /* -----------------TEKST ONDER DE DISNEYLAND TITEL--------------- */
 .homepage main section:nth-of-type(2) div p {
-	font-size: .8em;
+	font-size: .9em;
 	color: var(--color-text);
 }
 
@@ -480,8 +480,9 @@ main section {
 .homepage main section:nth-of-type(7) h5,
 .homepage main section:nth-of-type(8) h5 {
 	font-family: "Avenir", Arial, Helvetica, sans-serif;
-	font-size: 1em;
+	font-size: 1.2em;
 	padding-top: 1em;
+	color: var(--color-text);
 
 }
 
@@ -489,8 +490,8 @@ main section {
 .homepage main section:nth-of-type(7) p,
 .homepage main section:nth-of-type(8) p {
 	font-size: .9em;
-	padding-top: 3em;
-	padding-bottom: 1em;
+	padding-top: 2em;
+	padding-bottom: 1.8em;
 
 }
 
@@ -652,7 +653,7 @@ footer {
 }
 
 footer h4,
-h5 {
+footer h5 {
 	font-family: "avenir", Arial, Helvetica, sans-serif;
 	margin-bottom: 2em;
 	color: var(--button-color2);
