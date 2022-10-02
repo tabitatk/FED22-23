@@ -133,6 +133,7 @@ img {
 
 
 /* --------------------HAMBURGER MENU ------------------*/
+/* student asisstent heeft met sommige delen van de styling geholpen */
 
 header section:nth-of-type(2) {
 	position: fixed;
@@ -153,7 +154,7 @@ header section:nth-of-type(2) div button {
 
 header section:nth-of-type(2).hamburgermenu {
 	margin-left: -1.6em;
-	box-shadow: 0px 0px 0px 999px var(--color-shadow);
+	box-shadow: 0em 0em 0em 62 var(--color-shadow);
 
 }
 
@@ -249,6 +250,7 @@ p {
 main section {
 	padding: 0 1.5em;
 	margin-top: 1.5em;
+
 }
 
 .homepage main section:nth-of-type(1) {
@@ -336,7 +338,7 @@ main section {
 
 .homepage main section:nth-of-type(4) ul li {
 	display: flex;
-	flex-direction: column-reverse;
+	flex-direction: column;
 }
 
 
@@ -350,15 +352,18 @@ main section {
 	font-size: .9em;
 	margin-bottom: 0;
 	margin-top: 5%;
+	order: 2;
 
 }
 
 .homepage main section:nth-of-type(4) p {
+	order: 3;
 	margin: 0;
 	top: -1;
 }
 
 .homepage main section:nth-of-type(4) img {
+	order: 1;
 	width: 9em;
 }
 
@@ -458,6 +463,7 @@ main section {
 	flex-direction: column;
 	text-align: center;
 
+
 }
 
 .homepage main section:nth-of-type(8) article {
@@ -473,6 +479,7 @@ main section {
 	font-family: "gilroy", Arial, Helvetica, sans-serif;
 	font-size: .9em;
 	padding-top: 2em;
+	order: 2;
 
 }
 
@@ -483,6 +490,7 @@ main section {
 	font-size: 1.2em;
 	padding-top: 1em;
 	color: var(--color-text);
+	order: 3;
 
 }
 
@@ -492,7 +500,14 @@ main section {
 	font-size: .9em;
 	padding-top: 2em;
 	padding-bottom: 1.8em;
+	order: 4;
 
+}
+
+.homepage main section:nth-of-type(6) img,
+.homepage main section:nth-of-type(7) img,
+.homepage main section:nth-of-type(8) img {
+	order: 1;
 }
 
 /* ----------------------VIDEO -------------------*/
@@ -514,34 +529,39 @@ main section {
 	flex-direction: column;
 }
 
-.product main section:nth-of-type(1) p {
+.product main section:nth-of-type(1) p:nth-of-type(3) {
 	font-size: .6em;
 	text-align: center;
 	margin-top: 3em;
+	order: 1;
 }
 
 .product main section:nth-of-type(1) img:nth-of-type(1) {
 	margin-top: 1em;
+	order: 2;
 }
 
 .product main section:nth-of-type(1) h1 {
 	margin-top: 1.3em;
 	font-family: "Avenir", Arial, Helvetica, sans-serif;
 	font-size: 1em;
+	order: 3;
 }
 
-.product main section:nth-of-type(1) h2 {
+.product main section:nth-of-type(1) p:nth-of-type(1) {
 	font-family: "gilroy", Arial, Helvetica, sans-serif;
 	font-size: 1em;
 	margin-top: 1em;
+	order: 4;
 }
 
-.product main section:nth-of-type(1) h3 {
+.product main section:nth-of-type(1) p:nth-of-type(2) {
 	text-align: center;
 	font-size: .9em;
 	font-family: "avenir", Arial, Helvetica, sans-serif;
 	font-weight: 500;
 	margin-top: 2em;
+	order: 5;
 }
 
 
@@ -549,6 +569,7 @@ main section {
 	display: flex;
 	justify-content: center;
 	margin-bottom: 2em;
+	order: 6;
 
 }
 
@@ -559,10 +580,14 @@ main section {
 
 .product main section:nth-of-type(1) ul li img {
 	width: 4em;
+	order: 2;
+
 }
+
 
 .product main section:nth-of-type(1) {
 	background-color: var(--color-prouct-background);
+
 }
 
 .product main section:nth-of-type(1) ul li:nth-of-type(2) img {
@@ -587,10 +612,13 @@ main section {
 
 
 /* ---------------STYLING VAN DE 3E SECTION----------------- */
+/* STUDENT ASSISTENT NINA HEEFT HIERMEE GEHOLPEN */
 
 .product section:nth-of-type(3) div {
 	display: grid;
+	/* herhaal 4x de hoogte en verdeel dat gelijk met elkaar */
 	grid-template-rows: repeat(4, auto);
+	/* herhaal 2x, 1fr. hij moet 1fr 2x repeaten kan ook 1fr 1fr zijn */
 	grid-template-columns: repeat(2, 1fr);
 	gap: 1em;
 	padding-bottom: 8em;
@@ -603,6 +631,7 @@ main section {
 }
 
 /* iedere 3e img in de grid */
+/* 3n staat voor pak elke 3e afbeelding */
 
 .product section:nth-of-type(3) div img:nth-of-type(3n) {
 	grid-column: 1 / -1;
@@ -611,7 +640,7 @@ main section {
 }
 
 
-/* -------------Onderste buttons balk------------------ */
+/* -------------ONDERSTE BUTTONS BALK------------------ */
 .product section:nth-of-type(4) {
 
 	display: flex;
@@ -647,19 +676,21 @@ main section {
 	border: 1px solid;
 }
 
+/* ----------------------FOOTER----------------------- */
+
 footer {
 	padding: 1.5em;
 	background-color: var(--footer);
 }
 
-footer h4,
-footer h5 {
+footer li a {
 	font-family: "avenir", Arial, Helvetica, sans-serif;
 	margin-bottom: 2em;
 	color: var(--button-color2);
 }
 
-footer h5 {
+footer li a:nth-of-type(4),
+footer li a:nth-of-type(5) {
 	text-align: center;
 	margin-top: 2em;
 }
