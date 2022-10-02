@@ -248,18 +248,17 @@ Tabita
   Lijst met je bevindingen die in de test naar voren kwamen (geef ook aan wat er verbeterd is):
 
   #### Screenreader
-  Screenreader:
+  Screenreader & tabtest:
+  de testen verliepen niet helemaal soepel omdat hij dus de volgorde verkeer oplas. mijn html was zo erin gezet dat je eerst de image kreeg te horen en dan pas de titel en de prijs bijvoorbeeld. maar voor screenreaders is dat niet toegankelijk. ze willen eerst de titel en prijs horen en dan pas de omschrijving van de afbeelding. dus ik moet mijn html zo gaan structureren dat dat wat toegankelijker wordt voor screenreaders. 
 
-  #### Muis en Toetsenbord 
-  tab-test:
+ik heb hier een voorbeeld van mn oude en nieuwe html. ik heb de volgorde alsnog goed gekregen met order in css, dat zal je ook terug zien in mijn code.
 
-
-  Hier een omschrijving van hoe het opgelost kan worden (met indien nodig afbeeldingen)
-
+<img src="readme-images/niet-verbeterd" width="375px" alt="stukje code van verbetering">
+<img src="readme-images/verbeterd" width="375px" alt="stukje code van verbetering">
 
   #### Motoriek (shocks, elastiekjes)
   Motoriek:
-  Artikelen zijn groot genoeg om op te klikken met trillende arm. Alleen zijn de meeste artikelen nog geen links en nog niet tab-baar omdat ze geen link zijn. Voor eindoplevering moet ik nog van al die artikelen een <a> maken zodat je ze met tab kan focussen. 
+  Artikelen zijn groot genoeg om op te klikken met trillende arm. Alleen zijn de meeste artikelen nog geen links en nog niet tab-baar omdat ze geen link zijn. Voor eindoplevering moet ik nog van al die artikelen een <a> maken zodat je ze met tab kan focussen. ik heb geprobeerd de <a> overal toe te voegen zodat hij het wel opleest maar mijn hele html en css ging daar niet goed in mee nog dus student assistent heeft uitgelegd dat als ze niet naar een andere pagina verwijzen dat tab index ook mag dus dat heb ik toegevoegd aan mijn html.
 
   ik heb ook gedaan dat je op de plaatjes kan klikken want op de echte h&M website kan je alleen op de titels klikken en dat was dus een ding dat ik heb opgelost
 
@@ -281,10 +280,9 @@ Homepagina: nergens last van als je je hoofd een beetje draait.
 Gele bril:
 Homepagina: nergens last van, overal goed genoeg contrast
 2de pagina: zelfde geldt voor deze pagina
-<img src="readme-images/product.jpg" width="375px" alt="stukje code van verbetering">
-<img src="readme-images/product.jpg" width="375px" alt="stukje code van verbetering">
-<img src="readme-images/product.jpg" width="375px" alt="stukje code van verbetering">
-<img src="readme-images/product.jpg" width="375px" alt="stukje code van verbetering">
+<img src="readme-images/toegankelijkheidstest.jpg" width="375px" alt="stukje code van verbetering">
+
+ik heb ook de tekst een background-color gegeven zodat de tekst beter leesbaar is dus dat is ook een punt wat ik heb verbeterd
 </details>
 
 
@@ -348,15 +346,26 @@ ik had wat problemen met de kleine afbeeldingen omdat het in 1 section stond dus
 
 
   ### Dit ging goed/Heb ik geleerd: 
-  Korte omschrijving met plaatjes
+  Het ging eigenlijk beter dan verwacht. ik had al wat ervaring van vorig jaar dus ik wist al hoe de opdrachten werkte en wat ik moest doen. het verschil is wel dat ik dit jaar echt veel beter begreep hoe de code werkt. ik weet nog dat ik vorigjaar nog niet eens 1 pagina van html af kreeg en nu heb ik een hele website gemaakt en vind ik het ook leuk om code te typen. ik ben zelf dus ook heel trots op het werd wat ik gemaakt heb. 
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="top">
+  dit jaar heb ik geleerd:
+  1. hoe je flexbox goed gebruikt.
+  2. hoe je een hamburger menu maakt
+  3. hoe je een slider maakt
+  4. hoe je functies zoals audio en videos kan toevoegen
+  5. hoe je je website beter maakt voor mensen met een handicap.
+  6. hoe je typeselectors zonder een class aanspreekt
+  7. hoe je een html en css bestand opmaakt
+  8. hoe je gebruik maakt van javascript
+  9. dat niet alles vlot verloopt en code soms frustrerend kan zijn.
+
+  
 
 
   ### Dit was lastig/Is niet gelukt:
-  Korte omschrijving met plaatjes
+  ik vond het begrijpen van mijn grid op mijn product pagina best lastig. ik had zelf namelijk een andere manier gebruikt, omdat mijn code voornamelijk trial en error is/was. ik weet dat er voor heel veel code in mijn wesite vast andere en betere manieren zijn maar ik ben geen professional in code schrijven. ik vond de audio toevoegen ook nog best een dingetje want javascript is soms nog lastig te begrijpen. verder gingen veel dingen wel goed. ik heb geprobeerd nog in mijn css te vertellen waar sudent assistenten mee hebben geholpen want het is natuurlijk duidelijk dat ik ook om hulp gevraagd heb omdat ik veel code met trial en error gedaan heb.
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="bummer">
+  
 </details>
 
 
@@ -377,6 +386,7 @@ ik had wat problemen met de kleine afbeeldingen omdat het in 1 section stond dus
   5. https://www.w3schools.com/howto/howto_js_slideshow.asp 
   6. https://www.w3schools.com/howto/howto_js_mobile_navbar.asp 
   7. https://www.voicy.network/search?search=horn%20sound 
+  8. https://css-tricks.com/snippets/css/complete-guide-grid/ 
 
 
 </details>
