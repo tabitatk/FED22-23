@@ -15,12 +15,13 @@
 <body class="homepage">
 	<header>
 		<section>
-			<button><img src="./images/hamburgermenu.svg" alt="hamburger menu"></button>
+			<button><img src="./images/hamburgermenu.svg" alt="menu met catagorien"></button>
 			<a href="index.html"><img src="images/hmlogo.svg" alt="h en m logo"></a>
 		</section>
 
 		<section>
 			<div>
+				<!-- voor positioneren en styling -->
 				<ul>
 					<li><a href="product.html"><img src="./images/user.svg" alt="gebruiker icoon">Inloggen</a></li>
 					<li><a href="">Dames</a></li>
@@ -48,20 +49,20 @@
 	</header>
 
 	<main>
-
-		<section>
+		<!-- ik weet dat alles eigenlijk in een a moet voor de toegankelijkheid maar om dit achteraf toe te voegen ging niet goed met mijn html vandaar tabindex 0 -->
+		<section tabindex="0" aria-label="alt tekst ding">
+			<!-- span gezet om in js specifiek te kunnen aanspreken -->
 			<p>Standaardlevering 2-3 dagen <span>🚚</span></p>
-			<audio src="assets/vrachtwagengeluid.mp3"></audio>
+			<audio src="./assets/vrachtwagengeluid.mp3"></audio>
 		</section>
 
 
 
-		<section>
+		<section tabindex="0" aria-label="alt tekst ding">
 			<div>
 				<h2>Vier 30 jaar magie in Disneyland parijs</h2>
 				<p>De laatste dag om deel te nemen aan de member winactie is 28-09-2022</p>
 			</div>
-
 		</section>
 
 
@@ -76,49 +77,47 @@
 
 
 
-		<section>
+		<section tabindex="0" aria-label="alt tekst ding">
 			<h2>Nieuwe items</h2>
 			<ul>
 				<li>
-					<p>€39,99</p>
 					<h3>Oversized colbert</h3>
-					<img src="images/damesjas.png" alt="dames image">
-
-
-				</li>
-
-				<li>
 					<p>€39,99</p>
+					<img src="images/damesjas.png" alt="lange grijze vrouwen jas">
+				</li>
+
+				<li>
 					<h3>Oversized trui</h3>
-					<img src="images/damestrui.png" alt="dames image">
+					<p>€39,99</p>
+					<img src="images/damestrui.png" alt="grijze dames trui">
 
 				</li>
 
 				<li>
-					<p>€19,99</p>
 					<h3>Oversized trui</h3>
-					<img src="images/nieuwbinnen.png" alt="dames image">
+					<p>€19,99</p>
+					<img src="images/nieuwbinnen.png" alt="oranje top met lange mouwen">
 				</li>
 
 				<li>
-					<p>€19,99</p>
 					<h3>Oversized trui</h3>
-					<img src="images/nieuwbinnen.png" alt="dames image">
+					<p>€19,99</p>
+					<img src="images/nieuwbinnen3.png" alt="Zwarte leren jack">
 
 
 				</li>
 
 				<li>
-					<p>€19,99</p>
 					<h3>Oversized trui</h3>
-					<img src="images/nieuwbinnen.png" alt="dames image">
+					<p>€19,99</p>
+					<img src="images/nieuwbinnen2.png" alt="wite lange mouwen wollen jurk">
 
 
 				</li>
 				<li>
-					<p>€19,99</p>
 					<h3>Oversized trui</h3>
-					<img src="images/nieuwbinnen.png" alt="dames image">
+					<p>€19,99</p>
+					<img src="images/nieuwbinnen4.png" alt="roze colbert trui">
 
 				</li>
 
@@ -127,43 +126,40 @@
 		</section>
 
 
-		<section>
+		<section tabindex="0" aria-label="hier kan je spullen vinden met dingen voor je huis van de herfst">
 			<h2>H&M home fall collection</h2>
 			<p>Bekijk nu alle nieuwe spullen van H&M voor in huis</p>
-			<img src="images/h&m:home.png" alt="short haircut meisje">
+			<img src="images/h&m-home.png" alt="foto van een hippie woonkamer met planten">
 		</section>
 
 
 
-		<section>
+		<section tabindex="0" aria-label="hier komen nu een paar atikelen voorbij die je kan bekijken">
 			<h2>Magazine</h2>
 			<h3>A world of inspiration</h3>
 
 
-			<article>
-				<img src="images/tripplets.png" alt="3 mannen foto">
+			<article tabindex="0" aria-label="dit is een artikel over mens wear en trends">
 				<h4>Inside H&M</h4>
 				<h5>Men's wear trends autumn '22</h5>
 				<p>Read The Story</p>
+				<img src="images/tripplets.png" alt="3 jongens met een andere outfit naast elkaar">
 			</article>
 
 		</section>
 
 		<section>
-
-			<article tabindex="0" aria-label="alt tekst ding">
-				<img src="images/duo.png" alt="duo foto">
+			<article tabindex="0" aria-label="artikel met informatie over de h en m studio">
 				<h4>Inside H&M</h4>
 				<h5>H&M studio a/w 2022</h5>
 				<p>Read The Story</p>
+				<img src="images/duo.png" alt="foto van jongen en meisje met zwart witte trui aan">
 
 			</article>
-
 		</section>
 
 		<section>
-
-			<article>
+			<article tabindex="0" aria-label="dit is een h en m campagne video">
 				<video controls muted>
 
 					<source src="./assets/h&mvideo.mp4" type="video/mp4">
@@ -177,22 +173,14 @@
 
 	</main>
 
-	<footer>
-		<a href="">
-			<h4>Shop</h4>
-		</a>
-		<a href="">
-			<h4>Corporate info</h4>
-		</a>
-		<a href="">
-			<h4>Help</h4>
-		</a>
-		<a href="">
-			<h5>Meld je nu aan</h5>
-		</a>
-		<a href="">
-			<h5>Lees meer</h5>
-		</a>
+	<footer tabindex="0" aria-label="vanaf hier begint de footer">
+		<li>
+			<a href="">Shop</a>
+			<a href="">Corporate info</a>
+			<a href=""> Help</a>
+			<a href="">Meld je nu aan</a>
+			<a href="">Lees meer</a>
+		</li>
 
 		<p>Word member en ontvang 10% korting + gratis standaard verzending op je volgende aankoop</p>
 		<p>Deze inhoud van de website is geheel voor een schoolopdracht en de foto's zijn van de <a
