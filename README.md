@@ -67,6 +67,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   4. de pijltjes links en rechts leest hij woorden letter voor letter uit.
 
   Hier een omschrijving van hoe het opgelost kan worden (met indien nodig afbeeldingen)
+  betere alt tekst bij de nieuwe site
 
 
   #### Muis en Toetsenbord 
@@ -92,6 +93,8 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   4. er grotere knoppen moeten komen
   5. en de dingen verder uit elkaar moeten
 
+ 
+
   <img src="readme-images/elastiek.jpg" width="375px" alt="elastiek foto test">
   <img src="readme-images/ballon.jpg" width="375px" alt="ballon foto test">
   <img src="readme-images/parkinson.jpg" width="375px" alt="ballon foto test">
@@ -104,7 +107,8 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
  2. lange teksten uitputtend zijn om te lezen
  3. dat je grotere plaatjes nodig hebt
  4. dat er een duidelijk contrast moet zijn tussen de kleuren omdat het anders niet opvalt.
-  Hier een omschrijving van hoe het opgelost kan worden (met indien nodig afbeeldingen)
+  
+  dit kan opgelost worden door groter contrast tussen de tekst en afbeeldingen
 
 </details>
 
