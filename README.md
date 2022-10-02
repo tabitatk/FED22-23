@@ -253,8 +253,8 @@ Tabita
 
 ik heb hier een voorbeeld van mn oude en nieuwe html. ik heb de volgorde alsnog goed gekregen met order in css, dat zal je ook terug zien in mijn code.
 
-<img src="readme-images/niet-verbeterd" width="375px" alt="stukje code van verbetering">
-<img src="readme-images/verbeterd" width="375px" alt="stukje code van verbetering">
+<img src="readme-images/niet-verbeterd.png" width="375px" alt="stukje code van verbetering">
+<img src="readme-images/verbeterd.png" width="375px" alt="stukje code van verbetering">
 
   #### Motoriek (shocks, elastiekjes)
   Motoriek:
